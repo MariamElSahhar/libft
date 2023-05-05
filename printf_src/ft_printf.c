@@ -6,11 +6,11 @@
 /*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/27 19:19:37 by melsahha          #+#    #+#             */
-/*   Updated: 2023/05/05 11:15:16 by melsahha         ###   ########.fr       */
+/*   Updated: 2023/05/05 15:00:58 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/ft_printf.h"
+#include "../include/ft_printf.h"
 
 static int	ft_printf2(va_list ptr, char c)
 {

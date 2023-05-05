@@ -6,11 +6,11 @@
 /*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 13:08:50 by melsahha          #+#    #+#             */
-/*   Updated: 2023/05/05 11:15:00 by melsahha         ###   ########.fr       */
+/*   Updated: 2023/05/05 15:01:11 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/ft_printf.h"
+#include "../include/ft_printf.h"
 
 int	ft_putchar(char c)
 {

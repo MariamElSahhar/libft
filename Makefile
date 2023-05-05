@@ -6,19 +6,23 @@
 #    By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/28 16:28:04 by melsahha          #+#    #+#              #
-#    Updated: 2023/05/05 11:33:30 by melsahha         ###   ########.fr        #
+#    Updated: 2023/05/05 15:00:45 by melsahha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
+INCL = ./include/
+CC= cc
+CFLAGS = -Wall -Werror -Wextra
+
 LIBFT = libft.a
 LIBFT_DIR = ./libft_src/
-SRC = ft_printf.c ft_putuint.c ft_putnbr.c ft_putchar.c ft_puthex.c ft_putpoint.c
-OBJS = $(addprefix $(OBJ_DIR)/, $(SRC:.c=.o))
-CFLAGS = -Wall -Werror -Wextra
-CC = cc
-INCL = ./include/
+
+SRC_DIR = printf_src/
 OBJ_DIR = obj
+
+SRC = $(addprefix $(SRC_DIR), ft_printf.c ft_putuint.c ft_putnbr.c ft_putchar.c ft_puthex.c ft_putpoint.c)
+OBJS = $(addprefix $(OBJ_DIR)/, $(notdir $(SRC:.c=.o)))
 
 
 $(NAME): $(OBJS) $(OBJ_DIR)
@@ -29,7 +33,7 @@ $(NAME): $(OBJS) $(OBJ_DIR)
 
 all: $(NAME)
 
-$(OBJ_DIR)/%.o: %.c | $(OBJ_DIR)
+$(OBJ_DIR)/%.o: $(SRC_DIR)%.c | $(OBJ_DIR)
 	$(CC) -c $(CFLAGS) -I$(INCL) $< -o $@
 
 $(OBJ_DIR):
